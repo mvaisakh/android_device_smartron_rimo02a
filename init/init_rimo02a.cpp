@@ -33,13 +33,17 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+
 #include <android-base/strings.h>
 
 #include "vendor_init.h"
-#include "property_service.h"
 #include "log.h"
 #include "util.h"
+#include "property_service.h"
 
+using android::init::property_set;
 using android::base::Trim;
 
 static void init_alarm_boot_properties()
@@ -48,7 +52,7 @@ static void init_alarm_boot_properties()
     char const *power_off_alarm_file = "/persist/alarm/powerOffAlarmSet";
     std::string boot_reason;
     std::string power_off_alarm;
-    std::string reboot_reason = property_get("ro.boot.alarmboot");
+    std::string reboot_reason = android::base::GetProperty("ro.boot.alarmboot");
 
     if (read_file(boot_reason_file, &boot_reason)
             && read_file(power_off_alarm_file, &power_off_alarm)) {
@@ -69,9 +73,9 @@ static void init_alarm_boot_properties()
          */
          if ((Trim(boot_reason) == "3" || reboot_reason == "true")
                  && Trim(power_off_alarm) == "1") {
-             property_set("ro.alarm_boot", "true");
+             android::init::property_set("ro.alarm_boot", "true");
          } else {
-             property_set("ro.alarm_boot", "false");
+             android::init::property_set("ro.alarm_boot", "false");
          }
     }
 }

@@ -16,19 +16,26 @@
 
 $(call inherit-product, device/smartron/rimo02a/full_rimo02a.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Pixel Experience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Define some common stuff.
+TARGET_GAPPS_ARCH := arm64
+TARGET_DENSITY := xxhdpi
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := aosp_rimo02a
 BOARD_VENDOR := smartron
 PRODUCT_DEVICE := rimo02a
-
-
 TARGET_VENDOR_PRODUCT_NAME := srtphone
 TARGET_VENDOR_DEVICE_NAME := rimo02a
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=rimo02a
-PRODUCT_NAME=srtphone
+TARGET_DEVICE=rimo02a
+#PRODUCT_NAME=srtphone
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
