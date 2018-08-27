@@ -174,6 +174,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.msm8952
 
+# Powerhint configuration file
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/powerhint.xml:system/etc/powerhint.xml
+
 # Radio
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
