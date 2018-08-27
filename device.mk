@@ -318,6 +318,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@1.0-service \
     android.hardware.health@1.0
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl
