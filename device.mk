@@ -242,7 +242,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
-    wcnss_service
+    wcnss_service \
+    wificond
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
