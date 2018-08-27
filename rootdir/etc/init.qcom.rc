@@ -323,7 +323,7 @@ on property:wc_transport.start_hci=false
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user root
-    group bluetooth qcom_diag
+    group bluetooth diag
     disabled
 
 service config_bt_addr /system/bin/btnvtool -O
@@ -366,7 +366,7 @@ on property:hw.fm.init=1
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc qcom_diag
+    group radio audio bluetooth gps nfc diag
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -375,7 +375,7 @@ service ipacm-diag /system/bin/ipacm-diag
     class main
     user system
     socket ipacm_log_file dgram 660 system net_admin
-    group net_admin qcom_diag
+    group net_admin diag
 
 service ipacm /system/bin/ipacm
     class main
@@ -385,7 +385,7 @@ service ipacm /system/bin/ipacm
 service qti /system/vendor/bin/qti
     class main
     user radio
-    group radio net_raw qcom_diag usb net_admin
+    group radio net_raw diag usb net_admin
 
 service sensors /system/bin/sensors.qcom
     class late_start
@@ -424,7 +424,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet net_raw qcom_diag net_admin wifi
+    group gps inet net_raw diag net_admin wifi
 
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
@@ -441,7 +441,7 @@ on property:ro.data.large_tcp_window_size=true
 service ril-daemon1 /vendor/bin/hw/rild -c 2
     class main
     user root
-    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log net_raw
+    group radio cache inet misc audio sdcard_r sdcard_rw diag diag log net_raw
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /charger
