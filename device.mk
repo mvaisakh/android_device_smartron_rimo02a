@@ -298,3 +298,7 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl
