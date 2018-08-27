@@ -55,6 +55,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
+PRODUCT_PACKAGES += \
+    libbt-vendor
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
@@ -80,7 +83,8 @@ PRODUCT_PACKAGES += \
     copybit.msm8952 \
     hwcomposer.msm8952 \
     memtrack.msm8952 \
-    liboverlay
+    liboverlay \
+    libgenlock
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480
