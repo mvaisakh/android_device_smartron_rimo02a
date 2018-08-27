@@ -18,7 +18,6 @@ LOCAL_PATH := device/smartron/rimo02a
 
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
@@ -29,10 +28,9 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     libtinyalsa \
     libtinycompress \
-    libtinyxml \
-    tinymix
+    libtinyxml
 
-PRODUCT_COPY_FILES += \
+    PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
@@ -265,6 +263,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
     android.hardware.soundtrigger@2.0-impl
 
 # Bluetooth
