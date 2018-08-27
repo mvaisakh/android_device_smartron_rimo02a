@@ -283,3 +283,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl
