@@ -1,0 +1,6 @@
+[
+  {
+    "repository":  "vendor_motorola_cedric",
+    "target_path": "vendor/motorola/cedric"
+  },
+]
