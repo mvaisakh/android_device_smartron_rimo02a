@@ -136,6 +136,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl
+
+PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libOmxAacEnc \
     libOmxAmrEnc \
