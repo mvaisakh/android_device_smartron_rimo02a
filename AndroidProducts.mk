@@ -14,5 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_rimo02a.mk
+    $(LOCAL_DIR)/lineage_rimo02a.mk
     $(LOCAL_DIR)/full_rimo02a.mk

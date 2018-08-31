@@ -17,7 +17,7 @@
 $(call inherit-product, device/smartron/rimo02a/full_rimo02a.mk)
 
 # Inherit some common Pixel Experience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Define some common stuff.
 TARGET_GAPPS_ARCH := arm64
@@ -29,7 +29,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := aosp_rimo02a
+PRODUCT_NAME := lineage_rimo02a
 BOARD_VENDOR := smartron
 PRODUCT_DEVICE := rimo02a
 TARGET_VENDOR_PRODUCT_NAME := srtphone
